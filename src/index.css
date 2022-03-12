@@ -1,0 +1,25 @@
+.dust-bunny {
+  position: relative;
+}
+
+.dust-bunny-smile {
+  position: absolute;
+  left: 0;
+}
+
+.builder img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.builder input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.builder input:checked + img {
+  outline: 1px solid rgb(199, 199, 199);
+  transform: scale(1.2);
+}
