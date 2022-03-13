@@ -2,7 +2,8 @@
   position: relative;
 }
 
-.dust-bunny-smile {
+.dust-bunny-smile,
+.dust-bunny-addon {
   position: absolute;
   left: 0;
 }

@@ -8,6 +8,7 @@ import { getDatabase, push, ref, onValue } from "firebase/database";
 function App() {
   const [selectedBody, setSelectedBody] = useState(0);
   const [selectedSmile, setSelectedSmile] = useState(0);
+  const [selectedAddOns, setSelectedAddOns] = useState(new Set());
   const [galleryDustBunnies, setGalleryDustBunnies] = useState([]);
 
   const database = getDatabase(firebase);
@@ -17,7 +18,19 @@ function App() {
     push(dbRef, {
       body: selectedBody,
       smile: selectedSmile,
+      addOns: Array.from(selectedAddOns),
     });
+  }
+
+  function handleAddOnChange(addOn) {
+    const addOnsCopy = new Set(selectedAddOns);
+    if (selectedAddOns.has(addOn)) {
+      addOnsCopy.delete(addOn);
+      setSelectedAddOns(addOnsCopy);
+    } else {
+      addOnsCopy.add(addOn);
+      setSelectedAddOns(addOnsCopy);
+    }
   }
 
   useEffect(() => {
@@ -35,12 +48,18 @@ function App() {
       <Builder
         body={selectedBody}
         smile={selectedSmile}
+        addOns={selectedAddOns}
         onBodyChange={setSelectedBody}
         onSmileChange={setSelectedSmile}
+        onAddOnChange={handleAddOnChange}
       />
       <button onClick={submitDustBunny}>Submit</button>
 
-      <DustBunny body={selectedBody} smile={selectedSmile} />
+      <DustBunny
+        body={selectedBody}
+        smile={selectedSmile}
+        addOns={selectedAddOns}
+      />
       <Gallery dustBunnies={galleryDustBunnies} />
     </div>
   );

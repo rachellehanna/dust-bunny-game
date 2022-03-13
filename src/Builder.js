@@ -4,8 +4,19 @@ import body2 from "./images/body2.png";
 import smile0 from "./images/smile0.png";
 import smile1 from "./images/smile1.png";
 import smile2 from "./images/smile2.png";
+import addOn0 from "./images/addon0.png";
+import addOn1 from "./images/addon1.png";
+import addOn2 from "./images/addon2.png";
+import addOn3 from "./images/addon3.png";
 
-function Builder({ body, smile, onBodyChange, onSmileChange }) {
+function Builder({
+  body,
+  smile,
+  addOns,
+  onBodyChange,
+  onSmileChange,
+  onAddOnChange,
+}) {
   return (
     <div className="builder">
       <div className="builder-body">
@@ -60,6 +71,26 @@ function Builder({ body, smile, onBodyChange, onSmileChange }) {
             onChange={() => onSmileChange(2)}
           />
           <img src={smile2} alt="" />
+        </label>
+      </div>
+
+      <div className="builder-addons">
+        <p>Choose your add-ons:</p>
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(0)}
+            onChange={() => onAddOnChange(0)}
+          />
+          <img src={addOn0} alt="" />
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(1)}
+            onChange={() => onAddOnChange(1)}
+          />
+          <img src={addOn1} alt="" />
         </label>
       </div>
     </div>
