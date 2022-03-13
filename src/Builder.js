@@ -14,25 +14,25 @@ function Builder({ body, smile, onBodyChange, onSmileChange }) {
           <input
             type="radio"
             checked={body === 0}
-            onClick={() => onBodyChange(0)}
+            onChange={() => onBodyChange(0)}
           />
-          <img src={body0} />
+          <img src={body0} alt="" />
         </label>
         <label>
           <input
             type="radio"
             checked={body === 1}
-            onClick={() => onBodyChange(1)}
+            onChange={() => onBodyChange(1)}
           />
-          <img src={body1} />
+          <img src={body1} alt="" />
         </label>
         <label>
           <input
             type="radio"
             checked={body === 2}
-            onClick={() => onBodyChange(2)}
+            onChange={() => onBodyChange(2)}
           />
-          <img src={body2} />
+          <img src={body2} alt="" />
         </label>
       </div>
       <div className="builder-smile">
@@ -41,25 +41,25 @@ function Builder({ body, smile, onBodyChange, onSmileChange }) {
           <input
             type="radio"
             checked={smile === 0}
-            onClick={() => onSmileChange(0)}
+            onChange={() => onSmileChange(0)}
           />
-          <img src={smile0} />
+          <img src={smile0} alt="" />
         </label>
         <label>
           <input
             type="radio"
             checked={smile === 1}
-            onClick={() => onSmileChange(1)}
+            onChange={() => onSmileChange(1)}
           />
-          <img src={smile1} />
+          <img src={smile1} alt="" />
         </label>
         <label>
           <input
             type="radio"
             checked={smile === 2}
-            onClick={() => onSmileChange(2)}
+            onChange={() => onSmileChange(2)}
           />
-          <img src={smile2} />
+          <img src={smile2} alt="" />
         </label>
       </div>
     </div>

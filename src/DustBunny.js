@@ -11,8 +11,8 @@ const smiles = [smile0, smile1, smile2];
 function DustBunny({ body, smile }) {
   return (
     <div className="dust-bunny">
-      <img src={bodies[body]} />
-      <img className="dust-bunny-smile" src={smiles[smile]} />
+      <img src={bodies[body]} alt="" />
+      <img className="dust-bunny-smile" src={smiles[smile]} alt="" />
     </div>
   );
 }

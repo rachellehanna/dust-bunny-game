@@ -25,7 +25,7 @@ function App() {
       const dustBunnies = Object.values(response.val());
       setGalleryDustBunnies(dustBunnies);
     });
-  }, []);
+  }, [dbRef]);
 
   return (
     <div>

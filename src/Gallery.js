@@ -3,8 +3,8 @@ import DustBunny from "./DustBunny";
 function Gallery({ dustBunnies }) {
   return (
     <div className="gallery">
-      {dustBunnies.map((bunny) => {
-        return <DustBunny body={bunny.body} smile={bunny.smile} />;
+      {dustBunnies.map((bunny, index) => {
+        return <DustBunny key={index} body={bunny.body} smile={bunny.smile} />;
       })}
     </div>
   );
