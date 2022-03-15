@@ -8,10 +8,35 @@ import addon0 from "./images/addon0.png";
 import addon1 from "./images/addon1.png";
 import addon2 from "./images/addon2.png";
 import addon3 from "./images/addon3.png";
+import addon4 from "./images/addon4.png";
+import addon5 from "./images/addon5.png";
+import addon6 from "./images/addon6.png";
+import addon7 from "./images/addon7.png";
+import addon8 from "./images/addon8.png";
+import addon9 from "./images/addon9.png";
+import addon10 from "./images/addon10.png";
+import hair0 from "./images/hair0.png";
+import hair1 from "./images/hair1.png";
+import hair2 from "./images/hair2.png";
 
 const bodies = [body0, body1, body2];
 const smiles = [smile0, smile1, smile2];
-const addOnImages = [addon0, addon1, addon2, addon3];
+const addOnImages = [
+  addon0,
+  addon1,
+  addon2,
+  addon3,
+  addon4,
+  addon5,
+  addon6,
+  addon7,
+  addon8,
+  addon9,
+  addon10,
+  hair0,
+  hair1,
+  hair2,
+];
 
 function DustBunny({ body, smile, addOns }) {
   return (

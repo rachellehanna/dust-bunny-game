@@ -8,6 +8,17 @@ import addOn0 from "./images/addon0.png";
 import addOn1 from "./images/addon1.png";
 import addOn2 from "./images/addon2.png";
 import addOn3 from "./images/addon3.png";
+import addOn4 from "./images/addon4.png";
+import addOn5 from "./images/addon5.png";
+import addOn6 from "./images/addon6.png";
+import addOn7 from "./images/addon7.png";
+import addOn8 from "./images/addon8.png";
+import addOn9 from "./images/addon9.png";
+import addOn10 from "./images/addon10.png";
+
+import hair0 from "./images/hair0.png";
+import hair1 from "./images/hair1.png";
+import hair2 from "./images/hair2.png";
 
 function Builder({
   body,
@@ -74,8 +85,8 @@ function Builder({
         </label>
       </div>
 
+      <p>Choose your add-ons:</p>
       <div className="builder-addons">
-        <p>Choose your add-ons:</p>
         <label>
           <input
             type="checkbox"
@@ -83,6 +94,7 @@ function Builder({
             onChange={() => onAddOnChange(0)}
           />
           <img src={addOn0} alt="" />
+          <p>Dirt</p>
         </label>
         <label>
           <input
@@ -91,6 +103,7 @@ function Builder({
             onChange={() => onAddOnChange(1)}
           />
           <img src={addOn1} alt="" />
+          <p>Nails</p>
         </label>
         <label>
           <input
@@ -99,6 +112,7 @@ function Builder({
             onChange={() => onAddOnChange(2)}
           />
           <img src={addOn2} alt="" />
+          <p>Lint</p>
         </label>
         <label>
           <input
@@ -107,6 +121,106 @@ function Builder({
             onChange={() => onAddOnChange(3)}
           />
           <img src={addOn3} alt="" />
+          <p>Hair</p>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(4)}
+            onChange={() => onAddOnChange(4)}
+          />
+          <img src={addOn4} alt="" />
+          <p>Fish food</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(5)}
+            onChange={() => onAddOnChange(5)}
+          />
+          <img src={addOn5} alt="" />
+          <p>Pet hair</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(6)}
+            onChange={() => onAddOnChange(6)}
+          />
+          <img src={addOn6} alt="" />
+          <p>Crumbs</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(7)}
+            onChange={() => onAddOnChange(7)}
+          />
+          <img src={addOn7} alt="" />
+          <p>Herbs</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(8)}
+            onChange={() => onAddOnChange(8)}
+          />
+          <img src={addOn8} alt="" />
+          <p>Eyelashes</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(9)}
+            onChange={() => onAddOnChange(9)}
+          />
+          <img src={addOn9} alt="" />
+          <p>Cat litter</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(10)}
+            onChange={() => onAddOnChange(10)}
+          />
+          <img src={addOn10} alt="" />
+          <p>Makeup</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(11)}
+            onChange={() => onAddOnChange(11)}
+          />
+          <img src={hair0} alt="" />
+          <p>Mohawk</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(12)}
+            onChange={() => onAddOnChange(12)}
+          />
+          <img src={hair1} alt="" />
+          <p>Elvis</p>
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(13)}
+            onChange={() => onAddOnChange(13)}
+          />
+          <img src={hair2} alt="" />
+          <p>Joker</p>
         </label>
       </div>
     </div>
