@@ -18,16 +18,17 @@ function DustBunny({ body, smile, addOns }) {
     <div className="dust-bunny">
       <img src={bodies[body]} alt="" />
       <img className="dust-bunny-smile" src={smiles[smile]} alt="" />
-      {Array.from(addOns).map((addOn) => {
-        return (
-          <img
-            key={addOn}
-            className="dust-bunny-addon"
-            src={addOnImages[addOn]}
-            alt=""
-          />
-        );
-      })}
+      {addOns &&
+        Array.from(addOns).map((addOn) => {
+          return (
+            <img
+              key={addOn}
+              className="dust-bunny-addon"
+              src={addOnImages[addOn]}
+              alt=""
+            />
+          );
+        })}
     </div>
   );
 }

@@ -92,6 +92,22 @@ function Builder({
           />
           <img src={addOn1} alt="" />
         </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(2)}
+            onChange={() => onAddOnChange(2)}
+          />
+          <img src={addOn2} alt="" />
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={addOns.has(3)}
+            onChange={() => onAddOnChange(3)}
+          />
+          <img src={addOn3} alt="" />
+        </label>
       </div>
     </div>
   );

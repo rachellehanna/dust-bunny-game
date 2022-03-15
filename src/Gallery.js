@@ -2,7 +2,7 @@ import DustBunny from "./DustBunny";
 
 function Gallery({ dustBunnies }) {
   return (
-    <div className="gallery">
+    <div className="gallery" id="gallery">
       {dustBunnies.map((bunny, index) => {
         return (
           <DustBunny
