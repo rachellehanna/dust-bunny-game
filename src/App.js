@@ -126,11 +126,7 @@ function App() {
 
           <div className="gallery-section">
             <h2>Recently created - Gallery</h2>
-            <p>
-              <a href="#">
-                View all {galleryDustBunnies.length} dust buddies {`>`}{" "}
-              </a>
-            </p>
+            <p>View all {galleryDustBunnies.length} dust buddies</p>
           </div>
           <Gallery dustBunnies={galleryDustBunnies} />
         </div>
