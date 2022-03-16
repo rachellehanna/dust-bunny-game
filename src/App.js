@@ -19,6 +19,11 @@ function App() {
   const database = getDatabase(firebase);
   const dbRef = ref(database);
 
+  const showWelcome =
+    selectedBody === undefined &&
+    selectedSmile === undefined &&
+    selectedAddOns.size === 0;
+
   function submitDustBunny() {
     push(dbRef, {
       body: selectedBody,
@@ -85,11 +90,20 @@ function App() {
             <div className="right-side">
               <p>Live preview:</p>
               <div className="preview">
-                <DustBunny
-                  body={selectedBody}
-                  smile={selectedSmile}
-                  addOns={selectedAddOns}
-                />
+                {showWelcome ? (
+                  <p>
+                    Hello, welcome! <br />
+                    Here you can create your own dust bunny. Choose a body, a
+                    smile, and add-ons, and save it to the gallery to share with
+                    friends and family.
+                  </p>
+                ) : (
+                  <DustBunny
+                    body={selectedBody}
+                    smile={selectedSmile}
+                    addOns={selectedAddOns}
+                  />
+                )}
               </div>
               <div className="submit-container">
                 <input

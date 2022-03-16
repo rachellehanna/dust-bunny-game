@@ -4,6 +4,7 @@ import body2 from "./images/body2.png";
 import smile0 from "./images/smile0.png";
 import smile1 from "./images/smile1.png";
 import smile2 from "./images/smile2.png";
+import smile3 from "./images/smile3.png";
 import addon0 from "./images/addon0.png";
 import addon1 from "./images/addon1.png";
 import addon2 from "./images/addon2.png";
@@ -20,7 +21,7 @@ import hair1 from "./images/hair1.png";
 import hair2 from "./images/hair2.png";
 
 const bodies = [body0, body1, body2];
-const smiles = [smile0, smile1, smile2];
+const smiles = [smile0, smile1, smile2, smile3];
 const addOnImages = [
   addon0,
   addon1,
@@ -41,8 +42,7 @@ const addOnImages = [
 function DustBunny({ body, smile, addOns }) {
   return (
     <div className="dust-bunny">
-      <img src={bodies[body]} alt="" />
-      <img className="dust-bunny-smile" src={smiles[smile]} alt="" />
+      <img src={bodies[body]} />
       {addOns &&
         Array.from(addOns).map((addOn) => {
           return (
@@ -50,10 +50,10 @@ function DustBunny({ body, smile, addOns }) {
               key={addOn}
               className="dust-bunny-addon"
               src={addOnImages[addOn]}
-              alt=""
             />
           );
         })}
+      <img className="dust-bunny-smile" src={smiles[smile]} />
     </div>
   );
 }

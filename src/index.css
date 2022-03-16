@@ -118,6 +118,14 @@ a:hover {
   border: 1.5px solid #c09206;
   border-radius: 0.25rem;
   background-color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview p {
+  text-align: center;
+  padding: 1rem;
 }
 
 .dust-bunny img {
@@ -202,6 +210,3 @@ footer {
 footer a {
   text-transform: none;
 }
-
-/* #ffcb2b */
-/*#c09206*/
