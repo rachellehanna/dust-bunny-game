@@ -128,8 +128,13 @@ a:hover {
   padding: 1rem;
 }
 
-.dust-bunny img {
+.preview .dust-bunny {
   width: 400px;
+  height: 400px;
+}
+
+.dust-bunny img {
+  width: 100%;
 }
 
 .dust-bunny-smile,
