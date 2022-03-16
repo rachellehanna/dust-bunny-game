@@ -30,6 +30,10 @@ function App() {
       smile: selectedSmile,
       addOns: Array.from(selectedAddOns),
     });
+
+    setSelectedBody(undefined);
+    setSelectedSmile(undefined);
+    setSelectedAddOns(new Set());
   }
 
   function handleAddOnChange(addOn) {
