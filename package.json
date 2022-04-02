@@ -1,5 +1,6 @@
 {
   "name": "dust-bunny-game",
+  "homepage": "https://rachellehanna.com/dust-bunny",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
